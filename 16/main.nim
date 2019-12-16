@@ -44,9 +44,8 @@ proc applyPatternToSequence(sequence: seq[int]): seq[int] =
 
 for i in 1..100:
     sequence = applyPatternToSequence(sequence)
-    # echo sequence
 
-# echo "part1:", sequence[..7].join()
+echo "part1:", sequence[..7].join()
 
 
 
@@ -69,6 +68,6 @@ for phase in 1..100:
     while i > -1:
         sequence[i] = (sequence[i] + sequence[i + 1]) mod 10
         i -= 1
-    
+
 
 echo "part2: ", sequence[0..7].join("")
